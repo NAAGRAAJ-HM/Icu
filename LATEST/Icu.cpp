@@ -1,7 +1,7 @@
-#include "Dio.h"
+#include "Icu.h"
 
-class_Dio Dio;
+class_Icu Icu;
 
-void class_Dio::InitFunction(void){
+void class_Icu::InitFunction(void){
 }
 
