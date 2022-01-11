@@ -4,7 +4,7 @@
 
 class class_Icu{
    public:
-      void InitFunction(void);
+      FUNC(void, ICU_CODE) InitFunction(void);
 };
 
 extern class_Icu Icu;

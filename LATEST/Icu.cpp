@@ -2,6 +2,6 @@
 
 class_Icu Icu;
 
-void class_Icu::InitFunction(void){
+FUNC(void, ICU_CODE) class_Icu::InitFunction(void){
 }
 
