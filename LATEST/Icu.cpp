@@ -8,6 +8,8 @@
 /*****************************************************/
 #include "Icu.h"
 
+#include "Icu_EcuM.h"
+
 /*****************************************************/
 /* #DEFINES                                          */
 /*****************************************************/
@@ -32,14 +34,16 @@
 /* OBJECTS                                           */
 /*****************************************************/
 class_Icu Icu;
+class_Icu_EcuM Icu_EcuM;
+class_Icu_EcuM *Icu_EcuM_ptr = &Icu_EcuM;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, ICU_CODE) class_Icu::InitFunction(void){
+FUNC(void, ICU_CODE) class_Icu_EcuM::InitFunction(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu::DeInitFunction(void){
+FUNC(void, ICU_CODE) class_Icu_EcuM::DeInitFunction(void){
 }
 
 FUNC(void, ICU_CODE) class_Icu::SetMode(void){
