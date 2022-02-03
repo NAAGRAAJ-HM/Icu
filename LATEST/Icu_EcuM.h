@@ -42,7 +42,7 @@ class class_Icu_EcuM : public class_EcuM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_Icu_EcuM *Icu_EcuM_ptr;
+extern class_EcuM_Client *EcuM_Client_ptr_Icu;
 
 /*****************************************************/
 /* EOF                                               */
