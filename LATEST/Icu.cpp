@@ -24,8 +24,6 @@
 /*****************************************************/
 class module_Icu:
       public abstract_module
-   ,  public interface_Icu_EcuM
-   ,  public interface_Icu_SchM
 {
    public:
       FUNC(void, ICU_CODE) InitFunction   (void);
@@ -44,10 +42,9 @@ class module_Icu:
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-module_Icu Icu;
-
-interface_Icu_EcuM *EcuM_Client_ptr_Icu = &Icu;
-interface_Icu_SchM *SchM_Client_ptr_Icu = &Icu;
+module_Icu     Icu;
+infEcuMClient* gptrinfEcuMClient_Icu = &Icu;
+infSchMClient* gptrinfSchMClient_Icu = &Icu;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
