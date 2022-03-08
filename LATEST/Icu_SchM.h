@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern interface_Icu_SchM *SchM_Client_ptr_Icu;
+extern infSchMClient *gptrinfSchMClient_Icu;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
