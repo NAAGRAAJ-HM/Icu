@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "Icu_EcuM.h"
-#include "Icu_SchM.h"
+#include "infIcu_EcuM.h"
+#include "infIcu_SchM.h"
 #include "Icu_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_Icu:
    public:
       FUNC(void, ICU_CODE) InitFunction   (void);
       FUNC(void, ICU_CODE) DeInitFunction (void);
+      FUNC(void, ICU_CODE) GetVersionInfo (void);
       FUNC(void, ICU_CODE) MainFunction   (void);
 };
 
@@ -44,6 +45,7 @@ class module_Icu:
 /*****************************************************/
 module_Icu     Icu;
 infEcuMClient* gptrinfEcuMClient_Icu = &Icu;
+infDcmClient*  gptrinfDcmClient_Icu  = &Icu;
 infSchMClient* gptrinfSchMClient_Icu = &Icu;
 
 /*****************************************************/
@@ -53,6 +55,9 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(void){
 }
 
 FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
+}
+
+FUNC(void, ICU_CODE) module_Icu::GetVersionInfo(void){
 }
 
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
