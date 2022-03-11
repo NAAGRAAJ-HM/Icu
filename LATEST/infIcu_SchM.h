@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Icu_EcuM.h                               */
+/* File   : infIcu_SchM.h                            */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -32,7 +32,7 @@
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern infEcuMClient* gptrinfEcuMClient_Icu;
+extern infSchMClient* gptrinfSchMClient_Icu;
 
 /*****************************************************/
 /* FUNCTIONS                                         */

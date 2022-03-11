@@ -8,8 +8,8 @@
 /*****************************************************/
 #include "module.h"
 #include "infIcu_EcuM.h"
+#include "infIcu_Dcm.h"
 #include "infIcu_SchM.h"
-#include "Icu_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -63,6 +63,8 @@ FUNC(void, ICU_CODE) module_Icu::GetVersionInfo(void){
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
 }
 
+#include "Icu_Unused.h"
+
 FUNC(void, ICU_CODE) class_Icu_Unused::SetMode(void){
 }
 
@@ -112,9 +114,6 @@ FUNC(void, ICU_CODE) class_Icu_Unused::GetTimeElapsed(void){
 }
 
 FUNC(void, ICU_CODE) class_Icu_Unused::GetDutyCycleValues(void){
-}
-
-FUNC(void, ICU_CODE) class_Icu_Unused::GetVersionInfo(void){
 }
 
 /*****************************************************/
