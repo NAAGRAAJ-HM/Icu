@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infIcu_Version.h"
+#include "Icu_Cfg.h"
 #include "infIcu_EcuM.h"
 #include "infIcu_Dcm.h"
 #include "infIcu_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define ICU_AR_RELEASE_MAJOR_VERSION                                           4
+#define ICU_AR_RELEASE_MINOR_VERSION                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(ICU_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible ICU_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(ICU_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible ICU_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -61,6 +70,11 @@ FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
 }
 
 FUNC(void, ICU_CODE) module_Icu::GetVersionInfo(void){
+#if(STD_ON == Icu_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
