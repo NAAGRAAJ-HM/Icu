@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgIcu.h"
-#include "infIcu_EcuM.h"
-#include "infIcu_Dcm.h"
-#include "infIcu_SchM.h"
+#include "module.hpp"
+#include "CfgIcu.hpp"
+#include "infIcu_EcuM.hpp"
+#include "infIcu_Dcm.hpp"
+#include "infIcu_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -90,7 +90,7 @@ FUNC(void, ICU_CODE) module_Icu::GetVersionInfo(void){
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
 }
 
-#include "Icu_Unused.h"
+#include "Icu_Unused.hpp"
 
 FUNC(void, ICU_CODE) class_Icu_Unused::SetMode(void){
 }
