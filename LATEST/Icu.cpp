@@ -90,7 +90,26 @@ FUNC(void, ICU_CODE) module_Icu::GetVersionInfo(void){
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
 }
 
-#include "Icu_Unused.hpp"
+class class_Icu_Unused{
+   public:
+      FUNC(void, ICU_CODE) SetMode                (void);
+      FUNC(void, ICU_CODE) DisableWakeup          (void);
+      FUNC(void, ICU_CODE) SetActivationCondition (void);
+      FUNC(void, ICU_CODE) DisableNotification    (void);
+      FUNC(void, ICU_CODE) EnableNotification     (void);
+      FUNC(void, ICU_CODE) GetInputState          (void);
+      FUNC(void, ICU_CODE) StartTimeStamp         (void);
+      FUNC(void, ICU_CODE) StopTimeStamp          (void);
+      FUNC(void, ICU_CODE) GetTimeStampIndex      (void);
+      FUNC(void, ICU_CODE) ResetEdgeCount         (void);
+      FUNC(void, ICU_CODE) DisableEdgeCount       (void);
+      FUNC(void, ICU_CODE) EnableEdgeCount        (void);
+      FUNC(void, ICU_CODE) GetEdgeNumbers         (void);
+      FUNC(void, ICU_CODE) StartSignalMeasurement (void);
+      FUNC(void, ICU_CODE) StopSignalMeasurement  (void);
+      FUNC(void, ICU_CODE) GetTimeElapsed         (void);
+      FUNC(void, ICU_CODE) GetDutyCycleValues     (void);
+};
 
 FUNC(void, ICU_CODE) class_Icu_Unused::SetMode(void){
 }
