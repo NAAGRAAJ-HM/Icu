@@ -7,7 +7,6 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.hpp"
-#include "CfgIcu.hpp"
 #include "infIcu_EcuM.hpp"
 #include "infIcu_Dcm.hpp"
 #include "infIcu_SchM.hpp"
@@ -36,37 +35,40 @@ class module_Icu:
       public abstract_module
 {
    public:
+      module_Icu(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
+      }
       FUNC(void, ICU_CODE) InitFunction   (void);
       FUNC(void, ICU_CODE) DeInitFunction (void);
-      FUNC(void, ICU_CODE) GetVersionInfo (void);
       FUNC(void, ICU_CODE) MainFunction   (void);
-
-   private:
-      CONST(Std_TypeVersionInfo, ICU_CONST) VersionInfo = {
-            0x0000
-         ,  0xFFFF
-         ,  0x01
-         ,  '0'
-         ,  '1'
-         ,  '0'
-      };
 };
+
+extern VAR(module_Icu, ICU_VAR) Icu;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
+CONSTP2VAR(infEcuMClient, ICU_VAR, ICU_CONST) gptrinfEcuMClient_Icu = &Icu;
+CONSTP2VAR(infDcmClient,  ICU_VAR, ICU_CONST) gptrinfDcmClient_Icu  = &Icu;
+CONSTP2VAR(infSchMClient, ICU_VAR, ICU_CONST) gptrinfSchMClient_Icu = &Icu;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
+#include "CfgIcu.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_Icu, ICU_VAR) Icu;
-CONSTP2VAR(infEcuMClient, ICU_VAR, ICU_CONST) gptrinfEcuMClient_Icu = &Icu;
-CONSTP2VAR(infDcmClient,  ICU_VAR, ICU_CONST) gptrinfDcmClient_Icu  = &Icu;
-CONSTP2VAR(infSchMClient, ICU_VAR, ICU_CONST) gptrinfSchMClient_Icu = &Icu;
+VAR(module_Icu, ICU_VAR) Icu(
+   {
+         0x0000
+      ,  0xFFFF
+      ,  0x01
+      ,  '0'
+      ,  '1'
+      ,  '0'
+   }
+);
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
@@ -77,14 +79,6 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(void){
 
 FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
    Icu.IsInitDone = E_NOT_OK;
-}
-
-FUNC(void, ICU_CODE) module_Icu::GetVersionInfo(void){
-#if(STD_ON == Icu_DevErrorDetect)
-//TBD: API parameter check
-   Det_ReportError(
-   );
-#endif
 }
 
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
