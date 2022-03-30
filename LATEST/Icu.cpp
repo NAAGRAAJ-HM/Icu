@@ -6,7 +6,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.hpp"
+#include "Module.hpp"
 #include "infIcu_EcuM.hpp"
 #include "infIcu_Dcm.hpp"
 #include "infIcu_SchM.hpp"
@@ -37,6 +37,9 @@ class module_Icu:
    public:
       module_Icu(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
+      FUNC(void, _CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      );
       FUNC(void, ICU_CODE) InitFunction   (void);
       FUNC(void, ICU_CODE) DeInitFunction (void);
       FUNC(void, ICU_CODE) MainFunction   (void);
@@ -73,7 +76,19 @@ VAR(module_Icu, ICU_VAR) Icu(
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, ICU_CODE) module_Icu::InitFunction(void){
+FUNC(void, ICU_CODE) module_Icu::InitFunction(
+   CONSTP2CONST(CfgIcu_Type, CFGICU_CONFIG_DATA, CFGICU_APPL_CONST) lptrCfgIcu
+){
+   if(NULL_PTR == lptrCfgIcu){
+#if(STD_ON == Icu_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+// check lptrCfgIcu for memory faults
+// use PBcfg_Icu as back-up configuration
+   }
    Icu.IsInitDone = E_OK;
 }
 
