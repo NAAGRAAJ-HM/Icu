@@ -78,6 +78,7 @@ VAR(module_Icu, ICU_VAR) Icu(
 FUNC(void, ICU_CODE) module_Icu::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == Icu_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == Icu_DevErrorDetect)
       Det_ReportError(
@@ -85,6 +86,7 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Icu_DevErrorDetect)
          Det_ReportError(
@@ -96,10 +98,13 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
 // use PBcfg_Icu as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == Icu_InitCheck)
    }
+#endif
 }
 
 FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
+#if(STD_ON == Icu_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == Icu_DevErrorDetect)
       Det_ReportError(
@@ -107,11 +112,26 @@ FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == Icu_InitCheck)
    }
+#endif
 }
 
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
+#if(STD_ON == Icu_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == Icu_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == Icu_InitCheck)
+   }
+#endif
 }
 
 class class_Icu_Unused{
