@@ -31,8 +31,30 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
+class class_Icu_Functionality{
+   public:
+      FUNC(void, ICU_CODE) SetMode                (void);
+      FUNC(void, ICU_CODE) DisableWakeup          (void);
+      FUNC(void, ICU_CODE) SetActivationCondition (void);
+      FUNC(void, ICU_CODE) DisableNotification    (void);
+      FUNC(void, ICU_CODE) EnableNotification     (void);
+      FUNC(void, ICU_CODE) GetInputState          (void);
+      FUNC(void, ICU_CODE) StartTimeStamp         (void);
+      FUNC(void, ICU_CODE) StopTimeStamp          (void);
+      FUNC(void, ICU_CODE) GetTimeStampIndex      (void);
+      FUNC(void, ICU_CODE) ResetEdgeCount         (void);
+      FUNC(void, ICU_CODE) DisableEdgeCount       (void);
+      FUNC(void, ICU_CODE) EnableEdgeCount        (void);
+      FUNC(void, ICU_CODE) GetEdgeNumbers         (void);
+      FUNC(void, ICU_CODE) StartSignalMeasurement (void);
+      FUNC(void, ICU_CODE) StopSignalMeasurement  (void);
+      FUNC(void, ICU_CODE) GetTimeElapsed         (void);
+      FUNC(void, ICU_CODE) GetDutyCycleValues     (void);
+};
+
 class module_Icu:
       public abstract_module
+   ,  public class_Icu_Functionality
 {
    public:
       module_Icu(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
@@ -84,6 +106,10 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
    if(E_OK == IsInitDone){
 #if(STD_ON == Icu_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -92,6 +118,10 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Icu_DevErrorDetect)
          Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
          );
 #endif
       }
@@ -116,6 +146,10 @@ FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Icu_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -132,6 +166,10 @@ FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
    if(E_OK != IsInitDone){
 #if(STD_ON == Icu_DevErrorDetect)
       Det_ReportError(
+      0 //TBD: IdModule
+   ,  0 //TBD: IdInstance
+   ,  0 //TBD: IdApi
+   ,  0 //TBD: IdError
       );
 #endif
    }
@@ -142,76 +180,55 @@ FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
 #endif
 }
 
-class class_Icu_Unused{
-   public:
-      FUNC(void, ICU_CODE) SetMode                (void);
-      FUNC(void, ICU_CODE) DisableWakeup          (void);
-      FUNC(void, ICU_CODE) SetActivationCondition (void);
-      FUNC(void, ICU_CODE) DisableNotification    (void);
-      FUNC(void, ICU_CODE) EnableNotification     (void);
-      FUNC(void, ICU_CODE) GetInputState          (void);
-      FUNC(void, ICU_CODE) StartTimeStamp         (void);
-      FUNC(void, ICU_CODE) StopTimeStamp          (void);
-      FUNC(void, ICU_CODE) GetTimeStampIndex      (void);
-      FUNC(void, ICU_CODE) ResetEdgeCount         (void);
-      FUNC(void, ICU_CODE) DisableEdgeCount       (void);
-      FUNC(void, ICU_CODE) EnableEdgeCount        (void);
-      FUNC(void, ICU_CODE) GetEdgeNumbers         (void);
-      FUNC(void, ICU_CODE) StartSignalMeasurement (void);
-      FUNC(void, ICU_CODE) StopSignalMeasurement  (void);
-      FUNC(void, ICU_CODE) GetTimeElapsed         (void);
-      FUNC(void, ICU_CODE) GetDutyCycleValues     (void);
-};
-
-FUNC(void, ICU_CODE) class_Icu_Unused::SetMode(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::SetMode(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::DisableWakeup(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::DisableWakeup(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::SetActivationCondition(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::SetActivationCondition(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::DisableNotification(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::DisableNotification(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::EnableNotification(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::EnableNotification(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::GetInputState(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::GetInputState(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::StartTimeStamp(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::StartTimeStamp(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::StopTimeStamp(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::StopTimeStamp(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::GetTimeStampIndex(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::GetTimeStampIndex(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::ResetEdgeCount(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::ResetEdgeCount(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::DisableEdgeCount(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::DisableEdgeCount(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::EnableEdgeCount(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::EnableEdgeCount(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::GetEdgeNumbers(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::GetEdgeNumbers(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::StartSignalMeasurement(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::StartSignalMeasurement(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::StopSignalMeasurement(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::StopSignalMeasurement(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::GetTimeElapsed(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::GetTimeElapsed(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Unused::GetDutyCycleValues(void){
+FUNC(void, ICU_CODE) class_Icu_Functionality::GetDutyCycleValues(void){
 }
 
 /******************************************************************************/
