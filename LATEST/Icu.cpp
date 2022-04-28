@@ -7,6 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "Icu_core.hpp"
 #include "infIcu_EcuM.hpp"
 #include "infIcu_Dcm.hpp"
 #include "infIcu_SchM.hpp"
