@@ -7,10 +7,9 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
+#include "CfgIcu.hpp"
 #include "Icu_core.hpp"
-#include "infIcu_EcuM.hpp"
-#include "infIcu_Dcm.hpp"
-#include "infIcu_SchM.hpp"
+#include "infIcu.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -44,6 +43,7 @@ class module_Icu:
       );
       FUNC(void, ICU_CODE) DeInitFunction (void);
       FUNC(void, ICU_CODE) MainFunction   (void);
+      ICU_CORE_FUNCTIONALITIES
 };
 
 extern VAR(module_Icu, ICU_VAR) Icu;
@@ -58,7 +58,6 @@ CONSTP2VAR(infSchMClient, ICU_VAR, ICU_CONST) gptrinfSchMClient_Icu = &Icu;
 /******************************************************************************/
 /* PARAMS                                                                     */
 /******************************************************************************/
-#include "CfgIcu.hpp"
 
 /******************************************************************************/
 /* OBJECTS                                                                    */

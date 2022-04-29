@@ -12,7 +12,7 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define ICU_COREFUNCTIONALITIES                                                \
+#define ICU_CORE_FUNCTIONALITIES                                               \
               FUNC(void, ICU_CODE) SetMode                (void);              \
               FUNC(void, ICU_CODE) DisableWakeup          (void);              \
               FUNC(void, ICU_CODE) SetActivationCondition (void);              \
@@ -31,7 +31,7 @@
               FUNC(void, ICU_CODE) GetTimeElapsed         (void);              \
               FUNC(void, ICU_CODE) GetDutyCycleValues     (void);              \
 
-#define ICU_COREFUNCTIONALITIES_VIRTUAL                                        \
+#define ICU_CORE_FUNCTIONALITIES_VIRTUAL                                       \
       virtual FUNC(void, ICU_CODE) SetMode                (void) = 0;          \
       virtual FUNC(void, ICU_CODE) DisableWakeup          (void) = 0;          \
       virtual FUNC(void, ICU_CODE) SetActivationCondition (void) = 0;          \
@@ -59,7 +59,7 @@
 /******************************************************************************/
 class class_Icu_Functionality{
    public:
-      ICU_COREFUNCTIONALITIES_VIRTUAL
+      ICU_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/
