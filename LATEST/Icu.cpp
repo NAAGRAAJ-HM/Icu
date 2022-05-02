@@ -159,55 +159,55 @@ FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
 #endif
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::SetMode(void){
+FUNC(void, ICU_CODE) module_Icu::SetMode(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::DisableWakeup(void){
+FUNC(void, ICU_CODE) module_Icu::DisableWakeup(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::SetActivationCondition(void){
+FUNC(void, ICU_CODE) module_Icu::SetActivationCondition(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::DisableNotification(void){
+FUNC(void, ICU_CODE) module_Icu::DisableNotification(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::EnableNotification(void){
+FUNC(void, ICU_CODE) module_Icu::EnableNotification(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::GetInputState(void){
+FUNC(void, ICU_CODE) module_Icu::GetInputState(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::StartTimeStamp(void){
+FUNC(void, ICU_CODE) module_Icu::StartTimeStamp(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::StopTimeStamp(void){
+FUNC(void, ICU_CODE) module_Icu::StopTimeStamp(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::GetTimeStampIndex(void){
+FUNC(void, ICU_CODE) module_Icu::GetTimeStampIndex(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::ResetEdgeCount(void){
+FUNC(void, ICU_CODE) module_Icu::ResetEdgeCount(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::DisableEdgeCount(void){
+FUNC(void, ICU_CODE) module_Icu::DisableEdgeCount(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::EnableEdgeCount(void){
+FUNC(void, ICU_CODE) module_Icu::EnableEdgeCount(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::GetEdgeNumbers(void){
+FUNC(void, ICU_CODE) module_Icu::GetEdgeNumbers(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::StartSignalMeasurement(void){
+FUNC(void, ICU_CODE) module_Icu::StartSignalMeasurement(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::StopSignalMeasurement(void){
+FUNC(void, ICU_CODE) module_Icu::StopSignalMeasurement(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::GetTimeElapsed(void){
+FUNC(void, ICU_CODE) module_Icu::GetTimeElapsed(void){
 }
 
-FUNC(void, ICU_CODE) class_Icu_Functionality::GetDutyCycleValues(void){
+FUNC(void, ICU_CODE) module_Icu::GetDutyCycleValues(void){
 }
 
 /******************************************************************************/
