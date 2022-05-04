@@ -113,7 +113,7 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  ICU_E_UNINIT
       );
 #endif
    }
@@ -133,7 +133,7 @@ FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  ICU_E_UNINIT
       );
 #endif
    }
@@ -152,7 +152,7 @@ FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  ICU_E_UNINIT
       );
 #endif
    }
