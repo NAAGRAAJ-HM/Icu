@@ -89,7 +89,10 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Icu_InitCheck)
-   if(E_OK != IsInitDone){
+   if(
+         E_OK
+      != IsInitDone
+   ){
 #endif
       if(NULL_PTR != lptrCfgModule){
          if(STD_HIGH){
@@ -127,7 +130,10 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
 
 FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
 #if(STD_ON == Icu_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Icu_InitCheck)
       IsInitDone = E_NOT_OK;
@@ -147,7 +153,10 @@ FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
 
 FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
 #if(STD_ON == Icu_InitCheck)
-   if(E_OK == IsInitDone){
+   if(
+         E_OK
+      == IsInitDone
+   ){
 #endif
 #if(STD_ON == Icu_InitCheck)
    }
