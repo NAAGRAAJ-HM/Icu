@@ -9,7 +9,7 @@
 #include "Module.hpp"
 #include "CfgIcu.hpp"
 #include "Icu_core.hpp"
-#include "infIcu.hpp"
+#include "infIcu_Exp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -32,6 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Icu:
+   INTERFACES_EXPORTED_ICU
       public abstract_module
    ,  public class_Icu_Functionality
 {
