@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Icu:
-   INTERFACES_EXPORTED_ICU
+      INTERFACES_EXPORTED_ICU
       public abstract_module
    ,  public class_Icu_Functionality
 {
