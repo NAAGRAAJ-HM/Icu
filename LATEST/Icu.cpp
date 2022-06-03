@@ -10,6 +10,7 @@
 #include "CfgIcu.hpp"
 #include "Icu_core.hpp"
 #include "infIcu_Exp.hpp"
+#include "infIcu_Imp.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
