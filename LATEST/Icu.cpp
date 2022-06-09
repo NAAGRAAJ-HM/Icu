@@ -74,10 +74,10 @@ CONSTP2VAR(infSchMClient, ICU_VAR, ICU_CONST) gptrinfSchMClient_Icu = &Icu;
 VAR(module_Icu, ICU_VAR) Icu(
    {
 #if(STD_ON == _ReSIM)
-   char strModuleName[6] = "ICU";
+         "Icu"
 #else
 #endif
-         ICU_AR_RELEASE_VERSION_MAJOR
+      ,  ICU_AR_RELEASE_VERSION_MAJOR
       ,  ICU_AR_RELEASE_VERSION_MINOR
       ,  0x00
       ,  0xFF
