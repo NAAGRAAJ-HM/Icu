@@ -130,7 +130,9 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
 #endif
 }
 
-FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
+FUNC(void, ICU_CODE) module_Icu::DeInitFunction(
+   void
+){
 #if(STD_ON == Icu_InitCheck)
    if(
          E_OK
@@ -153,7 +155,9 @@ FUNC(void, ICU_CODE) module_Icu::DeInitFunction(void){
 #endif
 }
 
-FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
+FUNC(void, ICU_CODE) module_Icu::MainFunction(
+   void
+){
 #if(STD_ON == Icu_InitCheck)
    if(
          E_OK
@@ -175,55 +179,89 @@ FUNC(void, ICU_CODE) module_Icu::MainFunction(void){
 #endif
 }
 
-FUNC(void, ICU_CODE) module_Icu::SetMode(void){
+FUNC(void, ICU_CODE) module_Icu::SetMode(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::DisableWakeup(void){
+FUNC(void, ICU_CODE) module_Icu::DisableWakeup(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::SetActivationCondition(void){
+FUNC(void, ICU_CODE) module_Icu::SetActivationCondition(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::DisableNotification(void){
+FUNC(void, ICU_CODE) module_Icu::DisableNotification(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::EnableNotification(void){
+FUNC(void, ICU_CODE) module_Icu::EnableNotification(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::GetInputState(void){
+FUNC(void, ICU_CODE) module_Icu::GetInputState(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::StartTimeStamp(void){
+FUNC(void, ICU_CODE) module_Icu::StartTimeStamp(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::StopTimeStamp(void){
+FUNC(void, ICU_CODE) module_Icu::StopTimeStamp(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::GetTimeStampIndex(void){
+FUNC(void, ICU_CODE) module_Icu::GetTimeStampIndex(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::ResetEdgeCount(void){
+FUNC(void, ICU_CODE) module_Icu::ResetEdgeCount(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::DisableEdgeCount(void){
+FUNC(void, ICU_CODE) module_Icu::DisableEdgeCount(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::EnableEdgeCount(void){
+FUNC(void, ICU_CODE) module_Icu::EnableEdgeCount(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::GetEdgeNumbers(void){
+FUNC(void, ICU_CODE) module_Icu::GetEdgeNumbers(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::StartSignalMeasurement(void){
+FUNC(void, ICU_CODE) module_Icu::StartSignalMeasurement(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::StopSignalMeasurement(void){
+FUNC(void, ICU_CODE) module_Icu::StopSignalMeasurement(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::GetTimeElapsed(void){
+FUNC(void, ICU_CODE) module_Icu::GetTimeElapsed(
+   void
+){
 }
 
-FUNC(void, ICU_CODE) module_Icu::GetDutyCycleValues(void){
+FUNC(void, ICU_CODE) module_Icu::GetDutyCycleValues(
+   void
+){
 }
 
 /******************************************************************************/
