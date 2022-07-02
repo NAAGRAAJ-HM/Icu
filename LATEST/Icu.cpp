@@ -82,12 +82,7 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgIcu;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == Icu_DevErrorDetect)
