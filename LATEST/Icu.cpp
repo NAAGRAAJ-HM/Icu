@@ -7,9 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "Module.hpp"
-#include "CfgIcu.hpp"
-#include "Icu_core.hpp"
-#include "infIcu_Exp.hpp"
+#include "Icu.hpp"
 #include "infIcu_Imp.hpp"
 
 /******************************************************************************/
@@ -32,26 +30,6 @@
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
-class module_Icu:
-      INTERFACES_EXPORTED_ICU
-      public abstract_module
-   ,  public class_Icu_Functionality
-{
-   private:
-/******************************************************************************/
-/* OBJECTS                                                                    */
-/******************************************************************************/
-
-   public:
-      FUNC(void, ICU_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
-      );
-      FUNC(void, ICU_CODE) DeInitFunction (void);
-      FUNC(void, ICU_CODE) MainFunction   (void);
-      ICU_CORE_FUNCTIONALITIES
-};
-
-extern VAR(module_Icu, ICU_VAR) Icu;
 
 /******************************************************************************/
 /* CONSTS                                                                     */
