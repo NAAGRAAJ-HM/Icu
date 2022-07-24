@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstIcu.hpp"
 #include "CfgIcu.hpp"
 #include "Icu_core.hpp"
 #include "infIcu_Exp.hpp"
@@ -31,13 +32,15 @@ class module_Icu:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstIcu_Type* lptrConst = (ConstIcu_Type*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, ICU_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, ICU_CONST,       ICU_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
       );
       FUNC(void, ICU_CODE) DeInitFunction (void);
       FUNC(void, ICU_CODE) MainFunction   (void);

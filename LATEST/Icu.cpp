@@ -48,7 +48,8 @@ VAR(module_Icu, ICU_VAR) Icu;
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, ICU_CODE) module_Icu::InitFunction(
-   CONSTP2CONST(CfgModule_TypeAbstract, ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
+      CONSTP2CONST(ConstModule_TypeAbstract, ICU_CONST,       ICU_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == Icu_InitCheck)
    if(
@@ -56,8 +57,12 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
       != IsInitDone
    ){
 #endif
-      if(NULL_PTR != lptrCfgModule){
-         lptrCfg = lptrCfgModule;
+      if(
+            (NULL_PTR != lptrConstModule)
+         && (NULL_PTR != lptrCfgModule)
+      ){
+         lptrConst = lptrConstModule;
+         lptrCfg   = lptrCfgModule;
       }
       else{
 #if(STD_ON == Icu_DevErrorDetect)
