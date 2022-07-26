@@ -61,7 +61,7 @@ FUNC(void, ICU_CODE) module_Icu::InitFunction(
             (NULL_PTR != lptrConstModule)
          && (NULL_PTR != lptrCfgModule)
       ){
-         lptrConst = lptrConstModule;
+         lptrConst = (const ConstIcu_Type*)lptrConstModule;
          lptrCfg   = lptrCfgModule;
       }
       else{
