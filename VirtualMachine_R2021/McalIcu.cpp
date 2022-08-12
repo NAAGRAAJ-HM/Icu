@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define MCALICU_AR_RELEASE_VERSION_MAJOR                                           4
-#define MCALICU_AR_RELEASE_VERSION_MINOR                                           3
+#define ICU_AR_RELEASE_VERSION_MAJOR                                           4
+#define ICU_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(MCALICU_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible MCALICU_AR_RELEASE_VERSION_MAJOR!"
+#if(ICU_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible ICU_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(MCALICU_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible MCALICU_AR_RELEASE_VERSION_MINOR!"
+#if(ICU_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible ICU_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_McalIcu, MCALICU_VAR) McalIcu;
+VAR(module_McalIcu, ICU_VAR) McalIcu;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, MCALICU_CODE) module_McalIcu::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, MCALICU_CONST,       MCALICU_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   MCALICU_CONFIG_DATA, MCALICU_APPL_CONST) lptrCfgModule
+FUNC(void, ICU_CODE) module_McalIcu::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, ICU_CONST,       ICU_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   ICU_CONFIG_DATA, ICU_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == McalIcu_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, MCALICU_CODE) module_McalIcu::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  MCALICU_E_UNINIT
+         ,  ICU_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::DeInitFunction(
+FUNC(void, ICU_CODE) module_McalIcu::DeInitFunction(
    void
 ){
 #if(STD_ON == McalIcu_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, MCALICU_CODE) module_McalIcu::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  MCALICU_E_UNINIT
+         ,  ICU_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::MainFunction(
+FUNC(void, ICU_CODE) module_McalIcu::MainFunction(
    void
 ){
 #if(STD_ON == McalIcu_InitCheck)
@@ -132,94 +132,94 @@ FUNC(void, MCALICU_CODE) module_McalIcu::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  MCALICU_E_UNINIT
+         ,  ICU_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::SetMode(
+FUNC(void, ICU_CODE) module_McalIcu::SetMode(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::DisableWakeup(
+FUNC(void, ICU_CODE) module_McalIcu::DisableWakeup(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::SetActivationCondition(
+FUNC(void, ICU_CODE) module_McalIcu::SetActivationCondition(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::DisableNotification(
+FUNC(void, ICU_CODE) module_McalIcu::DisableNotification(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::EnableNotification(
+FUNC(void, ICU_CODE) module_McalIcu::EnableNotification(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::GetInputState(
+FUNC(void, ICU_CODE) module_McalIcu::GetInputState(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::StartTimeStamp(
+FUNC(void, ICU_CODE) module_McalIcu::StartTimeStamp(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::StopTimeStamp(
+FUNC(void, ICU_CODE) module_McalIcu::StopTimeStamp(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::GetTimeStampIndex(
+FUNC(void, ICU_CODE) module_McalIcu::GetTimeStampIndex(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::ResetEdgeCount(
+FUNC(void, ICU_CODE) module_McalIcu::ResetEdgeCount(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::DisableEdgeCount(
+FUNC(void, ICU_CODE) module_McalIcu::DisableEdgeCount(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::EnableEdgeCount(
+FUNC(void, ICU_CODE) module_McalIcu::EnableEdgeCount(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::GetEdgeNumbers(
+FUNC(void, ICU_CODE) module_McalIcu::GetEdgeNumbers(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::StartSignalMeasurement(
+FUNC(void, ICU_CODE) module_McalIcu::StartSignalMeasurement(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::StopSignalMeasurement(
+FUNC(void, ICU_CODE) module_McalIcu::StopSignalMeasurement(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::GetTimeElapsed(
+FUNC(void, ICU_CODE) module_McalIcu::GetTimeElapsed(
    void
 ){
 }
 
-FUNC(void, MCALICU_CODE) module_McalIcu::GetDutyCycleValues(
+FUNC(void, ICU_CODE) module_McalIcu::GetDutyCycleValues(
    void
 ){
 }
