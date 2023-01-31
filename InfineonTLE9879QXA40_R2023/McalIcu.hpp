@@ -32,14 +32,14 @@ class module_McalIcu:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-      const ConstMcalIcu_Type* lptrConst = (ConstMcalIcu_Type*)NULL_PTR;
+      const ConstModule_TypeAbstract* lptrNvMBlocksRom = (ConstModule_TypeAbstract*)NULL_PTR;
 
    public:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, MCALICU_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, MCALICU_CONST,       MCALICU_APPL_CONST) lptrConstModule
+            CONSTP2CONST(ConstModule_TypeAbstract, MCALICU_CONST,       MCALICU_APPL_CONST) lptrNvMBlocksRomModule
          ,  CONSTP2CONST(CfgModule_TypeAbstract,   MCALICU_CONFIG_DATA, MCALICU_APPL_CONST) lptrCfgModule
       );
       FUNC(void, MCALICU_CODE) DeInitFunction (void);
